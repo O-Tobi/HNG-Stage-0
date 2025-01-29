@@ -1,0 +1,255 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: rgb(114, 189, 163);
+    --text-dark: #222;
+    --text-light: #555;
+    --filter-primary: invert(32%) sepia(38%) saturate(379%) hue-rotate(122deg) brightness(90%) contrast(85%);
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Profile Card */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    border-left: 8px solid var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* Card Header */
+.card h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Card Body */
+.card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Profile Picture */
+.profile-picture img {
+    width: 250px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+/* Card Information */
+.card-info {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.fullName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.jobTitle {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    text-align: left;
+}
+
+.location,
+.time {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+.time {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Email */
+.email {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.socials img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    filter: var(--filter-primary);
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Icon Styling */
+.pin img {
+    width: 15px;
+    height: 15px;
+    filter: var(--filter-primary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 0;
+    }
+
+   .card h1 {
+        padding-inline: 15px;
+        padding-top: 15px;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-picture{
+        width: 100%;
+        padding: 15px;
+        background-color: var(--primary-color);
+        
+        
+    }
+
+    .profile-picture img {
+        width: 180px;
+        height: 180px;
+        border: 3px solid white;
+        border-radius: 50%;
+
+    }
+
+    .card-info {
+        margin-left: 0;
+        margin-top: 15px;
+        padding: 15px;
+    }
+
+    .fullName {
+        font-size: 1.3rem;
+    }
+
+    .jobTitle {
+        font-size: 1rem;
+    }
+
+    .bio {
+        font-size: 0.85rem;
+    }
+
+    .location,
+    .time,
+    .email {
+        font-size: 0.85rem;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 0;
+    }
+
+    .card h1 {
+        padding-inline: 10px;
+        padding-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    .profile-picture{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--primary-color);
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    .fullName {
+        font-size: 1.2rem;
+    }
+
+    .jobTitle {
+        font-size: 0.95rem;
+    }
+
+    .bio {
+        font-size: 0.8rem;
+    }
+
+    .location,
+    .time,
+    .email {
+        font-size: 0.8rem;
+    }
+
+    .socials img {
+        width: 22px;
+        height: 22px;
+    }
+}
